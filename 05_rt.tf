@@ -1,4 +1,4 @@
-resource "aws_route_table" "jskim-rt" {
+resource "aws_route_table" "jskim_rt" {
   vpc_id = aws_vpc.jskim_vpc.id
 
   route {
