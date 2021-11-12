@@ -37,3 +37,23 @@ resource "aws_subnet" "jskim_pric" {
     "Name" = "jskim-pric"
   }
 }
+
+# 가용영역 a의 Private DB Subnet
+resource "aws_subnet" "jskim_pridba" {
+  vpc_id = aws_vpc.jskim_vpc.id
+  cidr_block = "10.0.4.0/24"
+  availability_zone = "ap-northeast-2a"
+  tags = {
+    "Name" = "jskim-pridba"
+  }
+}
+
+# 가용영역 c의 Private DB Subnet
+resource "aws_subnet" "jskim_pridbc" {
+  vpc_id = aws_vpc.jskim_vpc.id
+  cidr_block = "10.0.5.0/24"
+  availability_zone = "ap-northeast-2c"
+  tags = {
+    "Name" = "jskim-pridbc"
+  }
+}
