@@ -17,7 +17,7 @@ data "aws_ami" "amzn" {
 */
 
 resource "aws_instance" "jskim_weba" {
-  ami = "ami-04e8dfc09b22389ad"
+  ami = "ami-04e8dfc09b22389ad"   #data.aws_ami.amzn.id
   instance_type = "t2.micro"
   key_name = "jskim2-key"
   availability_zone = "ap-northeast-2a"
